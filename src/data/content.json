@@ -1,0 +1,256 @@
+{
+  "site": {
+    "name": "Sensen Games",
+    "tagline": {
+      "en": "Creating compelling, accessible arcade games",
+      "pt": "Criando jogos arcade cativantes e acessíveis"
+    },
+    "description": {
+      "en": "Indie game studio focused on challenging arcade games for players with limited time",
+      "pt": "Estúdio indie focado em jogos arcade desafiadores para jogadores com pouco tempo"
+    }
+  },
+  "nav": {
+    "home": {
+      "en": "Home",
+      "pt": "Início"
+    },
+    "about": {
+      "en": "About",
+      "pt": "Sobre"
+    },
+    "games": {
+      "en": "Games",
+      "pt": "Jogos"
+    },
+    "contact": {
+      "en": "Contact",
+      "pt": "Contato"
+    },
+    "press": {
+      "en": "Press",
+      "pt": "Imprensa"
+    }
+  },
+  "hero": {
+    "title": {
+      "en": "Hi, we are Sensen Games!",
+      "pt": "Olá, nós somos a Sensen Games!"
+    },
+    "subtitle": {
+      "en": "Creating compelling, accessible arcade games",
+      "pt": "Criando jogos arcade cativantes e acessíveis"
+    },
+    "cta": {
+      "games": {
+        "en": "Our Games",
+        "pt": "Nossos Jogos"
+      },
+      "steam": {
+        "en": "Steam",
+        "pt": "Steam"
+      }
+    }
+  },
+  "about": {
+    "title": {
+      "en": "A little bit about us",
+      "pt": "Um pouco sobre nós"
+    },
+    "description": {
+      "en": "We are tiny, just two guys trying very hard to make something good and fun to compete for that few minutes of attention we can get on today's frenetic world. If we seem too slow, it's on purpose. The last time we did a rush job, we made a complete mess. Because of that, we've adopted a more careful rhythm. Yes, we're still slow, but also more sure of what we're doing and the final result. Yes, yes, it's still a mess sometimes, but at least now it's a mess with intention. We know what we're doing, we just can't do it very fast.",
+      "pt": "Somos pequenos, apenas dois caras tentando muito fazer algo bom e divertido para competir por aqueles poucos minutos de atenção que podemos obter no mundo frenético de hoje. Se parecemos muito lentos, é de propósito. Da última vez que fizemos um trabalho apressado, fizemos uma bagunça completa. Por causa disso, adotamos um ritmo mais cuidadoso. Sim, ainda somos lentos, mas também mais seguros do que estamos fazendo e do resultado final. Sim, sim, ainda é uma bagunça às vezes, mas pelo menos agora é uma bagunça com intenção. Sabemos o que estamos fazendo, só não conseguimos fazer muito rápido."
+    }
+  },
+  "team": [
+    {
+      "name": "John Doe",
+      "role": {
+        "en": "Game Designer",
+        "pt": "Designer de Jogos"
+      },
+      "image": "/images/team/member1.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "role": {
+        "en": "Programmer",
+        "pt": "Programador"
+      },
+      "image": "/images/team/member2.jpg"
+    },
+    {
+      "name": "Bob Johnson",
+      "role": {
+        "en": "Artist",
+        "pt": "Artista"
+      },
+      "image": "/images/team/member3.jpg"
+    }
+  ],
+  "games": {
+    "title": {
+      "en": "Our Games",
+      "pt": "Nossos Jogos"
+    },
+    "description": {
+      "en": "Learn more directly at a level more compelling of the game as depicted in a manner that our more liberal community.",
+      "pt": "Aprenda mais diretamente em um nível mais atraente do jogo conforme retratado de uma maneira que nossa comunidade mais liberal."
+    },
+    "seeMore": {
+      "en": "See more",
+      "pt": "Ver mais"
+    },
+    "catalog": [
+      {
+        "id": "game1",
+        "title": "Game Title 1",
+        "description": {
+          "en": "An exciting arcade adventure",
+          "pt": "Uma aventura arcade emocionante"
+        },
+        "image": "/images/games/game1.jpg",
+        "video": "/videos/game1.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      },
+      {
+        "id": "game2",
+        "title": "Game Title 2",
+        "description": {
+          "en": "Fast-paced action gameplay",
+          "pt": "Jogabilidade de ação acelerada"
+        },
+        "image": "/images/games/game2.jpg",
+        "video": "/videos/game2.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      },
+      {
+        "id": "game3",
+        "title": "Game Title 3",
+        "description": {
+          "en": "Challenging puzzle mechanics",
+          "pt": "Mecânicas de quebra-cabeça desafiadoras"
+        },
+        "image": "/images/games/game3.jpg",
+        "video": "/videos/game3.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      },
+      {
+        "id": "game4",
+        "title": "Game Title 4",
+        "description": {
+          "en": "Retro-inspired platformer",
+          "pt": "Plataforma inspirada em retro"
+        },
+        "image": "/images/games/game4.jpg",
+        "video": "/videos/game4.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      },
+      {
+        "id": "game5",
+        "title": "Game Title 5",
+        "description": {
+          "en": "Intense boss battles",
+          "pt": "Batalhas de chefe intensas"
+        },
+        "image": "/images/games/game5.jpg",
+        "video": "/videos/game5.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      },
+      {
+        "id": "game6",
+        "title": "Game Title 6",
+        "description": {
+          "en": "Strategic gameplay elements",
+          "pt": "Elementos de jogabilidade estratégica"
+        },
+        "image": "/images/games/game6.jpg",
+        "video": "/videos/game6.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      },
+      {
+        "id": "game7",
+        "title": "Game Title 7",
+        "description": {
+          "en": "Unique art style and visuals",
+          "pt": "Estilo de arte e visuais únicos"
+        },
+        "image": "/images/games/game7.jpg",
+        "video": "/videos/game7.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      },
+      {
+        "id": "game8",
+        "title": "Game Title 8",
+        "description": {
+          "en": "Cooperative multiplayer fun",
+          "pt": "Diversão cooperativa multijogador"
+        },
+        "image": "/images/games/game8.jpg",
+        "video": "/videos/game8.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      },
+      {
+        "id": "game9",
+        "title": "Game Title 9",
+        "description": {
+          "en": "Endless replayability",
+          "pt": "Rejogabilidade infinita"
+        },
+        "image": "/images/games/game9.jpg",
+        "video": "/videos/game9.mp4",
+        "steamUrl": "https://store.steampowered.com/",
+        "pressKitUrl": "#"
+      }
+    ]
+  },
+  "contact": {
+    "title": {
+      "en": "Connect with us!",
+      "pt": "Conecte-se conosco!"
+    },
+    "description": {
+      "en": "Get the latest news, cool stuff and more! Never spam. Just pure love in the format of pixels.",
+      "pt": "Receba as últimas notícias, coisas legais e muito mais! Nunca spam. Apenas amor puro no formato de pixels."
+    },
+    "form": {
+      "placeholder": {
+        "en": "Enter your email",
+        "pt": "Digite seu e-mail"
+      },
+      "button": {
+        "en": "Subscribe",
+        "pt": "Inscrever-se"
+      },
+      "success": {
+        "en": "Thanks for subscribing!",
+        "pt": "Obrigado por se inscrever!"
+      },
+      "error": {
+        "en": "Please enter a valid email",
+        "pt": "Por favor, insira um e-mail válido"
+      }
+    }
+  },
+  "footer": {
+    "copyright": {
+      "en": "Copyright © Sensen Games All Rights Reserved.",
+      "pt": "Copyright © Sensen Games Todos os Direitos Reservados."
+    }
+  },
+  "social": {
+    "steam": "https://store.steampowered.com/",
+    "facebook": "https://facebook.com/",
+    "twitter": "https://twitter.com/",
+    "bluesky": "https://bsky.app/",
+    "threads": "https://threads.net/"
+  }
+}
