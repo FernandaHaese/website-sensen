@@ -21,7 +21,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div>
-            <img src={logo} alt={content.site.name} className="h-10 w-auto" />
+            <img src={logo} alt={content.site.name} className="h-10 w-auto rounded-lg" />
           </div>
 
           {/* Navigation Links */}
