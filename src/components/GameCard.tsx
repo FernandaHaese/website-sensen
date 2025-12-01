@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
-import { ExternalLink } from 'lucide-react';
 
 interface GameCardProps {
   title: string;
@@ -73,7 +72,6 @@ export const GameCard = ({
           >
             <a href={steamUrl} target="_blank" rel="noopener noreferrer">
               Steam
-              <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
           <Button
@@ -84,7 +82,6 @@ export const GameCard = ({
           >
             <a href={pressKitUrl} target="_blank" rel="noopener noreferrer">
               Press Kit
-              <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
         </div>
