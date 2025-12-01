@@ -67,14 +67,6 @@ export const Header = () => {
                 {item.label[language]}
               </button>
             ))}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              {content.nav.press[language]}
-            </a>
             
             {/* Language Switcher */}
             <div className="flex items-center space-x-2 ml-4">
@@ -120,14 +112,6 @@ export const Header = () => {
                   {item.label[language]}
                 </button>
               ))}
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors font-medium"
-              >
-                {content.nav.press[language]}
-              </a>
               
               {/* Mobile Language Switcher */}
               <div className="flex items-center space-x-2 pt-2">
