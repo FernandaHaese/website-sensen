@@ -39,17 +39,17 @@ export const Hero = () => {
              style={{ animationDelay: '0.4s' }}>
           <Button
             size="lg"
-            variant="secondary"
+            variant="gradient"
             onClick={scrollToGames}
-            className="text-lg px-8 py-6 hover-lift"
+            className="text-lg px-8 py-6"
           >
             {t(content.hero.cta.games)}
           </Button>
           <Button
             size="lg"
-            variant="outline"
+            variant="outline-glow"
             asChild
-            className="text-lg px-8 py-6 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary hover-lift"
+            className="text-lg px-8 py-6"
           >
             <a href={content.social.steam} target="_blank" rel="noopener noreferrer">
               {t(content.hero.cta.steam)}

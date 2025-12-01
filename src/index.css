@@ -40,6 +40,28 @@ All colors MUST be HSL.
 
     --radius: 0.875rem;              /* 14px */
     
+    /* Button system tokens */
+    --btn-radius: 999px;             /* pill shape for CTAs */
+    --btn-radius-sm: 12px;           /* for chips/small buttons */
+    
+    --btn-bg: 23 91% 51%;            /* #F56E0F brand default */
+    --btn-bg-hover: 18 85% 50%;      /* #E65416 hover */
+    --btn-bg-pressed: 28 86% 57%;    /* #F08B33 pressed */
+    
+    --btn-text-on-brand: 270 14% 9%; /* #151419 high contrast on orange */
+    
+    --btn-outline: 221 14% 93%;      /* #E6E8EB borders in light theme */
+    --btn-outline-hover: 220 10% 84%; /* #D6DAE0 hover border */
+    --btn-ghost-hover: 0 0% 0% / 0.04; /* rgba(0,0,0,.04) */
+    
+    --btn-text: 270 7% 11%;          /* #1B1B1E default text in neutral buttons */
+    --btn-text-muted: 220 6% 44%;    /* #6F7378 */
+    
+    --btn-shadow: 0 6px 18px rgba(21, 20, 25, 0.08);
+    --btn-shadow-pressed: 0 3px 10px rgba(21, 20, 25, 0.12);
+    
+    --focus-ring: 28 86% 57%;        /* #F08B33 accessibility outline */
+    
     /* Hero gradient - warm radial for light mode */
     --hero-gradient: radial-gradient(900px 600px at 65% 55%, hsla(23, 91%, 51%, 0.14), transparent 60%), hsl(0 0% 98%);
     
@@ -101,6 +123,11 @@ All colors MUST be HSL.
     --border: 0 0% 15%;              /* #262626 */
     --input: 0 0% 15%;
     --ring: 28 86% 57%;
+    
+    /* Button tokens for dark mode */
+    --btn-outline: 0 0% 20%;         /* lighter border in dark */
+    --btn-outline-hover: 0 0% 25%;
+    --btn-ghost-hover: 255 255 255 / 0.06;
     
     --hero-gradient: radial-gradient(800px 600px at 70% 60%, hsla(23, 91%, 51%, 0.22), transparent 60%), hsl(270 14% 9%);
     --video-overlay: hsla(270, 14%, 9%, 0.7);
