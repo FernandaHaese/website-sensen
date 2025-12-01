@@ -63,6 +63,16 @@ export default {
           "700": "hsl(var(--brand-700))",
         },
         soft: "hsl(var(--soft-bg))",
+        btn: {
+          bg: "hsl(var(--btn-bg))",
+          "bg-hover": "hsl(var(--btn-bg-hover))",
+          "bg-pressed": "hsl(var(--btn-bg-pressed))",
+          "text-on-brand": "hsl(var(--btn-text-on-brand))",
+          outline: "hsl(var(--btn-outline))",
+          "outline-hover": "hsl(var(--btn-outline-hover))",
+          text: "hsl(var(--btn-text))",
+          "text-muted": "hsl(var(--btn-text-muted))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
