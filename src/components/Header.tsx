@@ -53,7 +53,7 @@ export const Header = () => {
             onClick={() => scrollToSection('home')}
             className="hover:opacity-80 transition-opacity"
           >
-            <img src={logo} alt={content.site.name} className="h-12 w-auto" />
+            <img src={logo} alt={content.site.name} className="h-12 w-auto rounded-lg" />
           </button>
 
           {/* Desktop Navigation */}
