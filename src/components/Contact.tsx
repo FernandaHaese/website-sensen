@@ -65,7 +65,7 @@ export const Contact = () => {
           </form>
 
           {/* Social Links */}
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
             <a
               href={content.social.facebook}
               target="_blank"
