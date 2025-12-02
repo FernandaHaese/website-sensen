@@ -78,14 +78,6 @@
         "pt": "Programador"
       },
       "image": "/images/team/member2.jpg"
-    },
-    {
-      "name": "Bob Johnson",
-      "role": {
-        "en": "Artist",
-        "pt": "Artista"
-      },
-      "image": "/images/team/member3.jpg"
     }
   ],
   "games": {
