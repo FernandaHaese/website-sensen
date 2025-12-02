@@ -48,7 +48,7 @@ All colors MUST be HSL.
     --btn-bg-hover: 18 85% 50%;      /* #E65416 hover */
     --btn-bg-pressed: 28 86% 57%;    /* #F08B33 pressed */
     
-    --btn-text-on-brand: 270 14% 9%; /* #151419 high contrast on orange */
+    --btn-text-on-brand: 0 0% 98%;   /* #FBFBFB white text on orange */
     
     --btn-outline: 221 14% 93%;      /* #E6E8EB borders in light theme */
     --btn-outline-hover: 220 10% 84%; /* #D6DAE0 hover border */
