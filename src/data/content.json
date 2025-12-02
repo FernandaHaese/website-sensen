@@ -242,7 +242,9 @@
     "steam": "https://store.steampowered.com/",
     "facebook": "https://facebook.com/",
     "twitter": "https://twitter.com/",
+    "instagram": "https://instagram.com/",
     "bluesky": "https://bsky.app/",
-    "threads": "https://threads.net/"
+    "threads": "https://threads.net/",
+    "pressKit": "#"
   }
 }

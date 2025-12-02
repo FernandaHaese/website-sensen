@@ -4,7 +4,13 @@ import content from '@/data/content.json';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { toast } from 'sonner';
-import { Facebook, Twitter } from 'lucide-react';
+import facebookIcon from '@/assets/social-facebook.png';
+import twitterIcon from '@/assets/social-twitter.png';
+import instagramIcon from '@/assets/social-instagram.png';
+import threadsIcon from '@/assets/social-threads.png';
+import steamIcon from '@/assets/social-steam.png';
+import blueskyIcon from '@/assets/social-bluesky.png';
+import presskitIcon from '@/assets/social-presskit.png';
 
 export const Contact = () => {
   const { t } = useTranslation();
@@ -68,24 +74,13 @@ export const Contact = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6">
             <a
-              href={content.social.steam}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors p-2"
-              aria-label="Steam"
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-              </svg>
-            </a>
-            <a
               href={content.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors p-2"
               aria-label="Facebook"
             >
-              <Facebook className="w-6 h-6" />
+              <img src={facebookIcon} alt="Facebook" className="w-6 h-6" />
             </a>
             <a
               href={content.social.twitter}
@@ -94,18 +89,16 @@ export const Contact = () => {
               className="text-muted-foreground hover:text-primary transition-colors p-2"
               aria-label="X (Twitter)"
             >
-              <Twitter className="w-6 h-6" />
+              <img src={twitterIcon} alt="X (Twitter)" className="w-6 h-6" />
             </a>
             <a
-              href={content.social.bluesky}
+              href={content.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors p-2"
-              aria-label="Bluesky"
+              aria-label="Instagram"
             >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-              </svg>
+              <img src={instagramIcon} alt="Instagram" className="w-6 h-6" />
             </a>
             <a
               href={content.social.threads}
@@ -114,9 +107,34 @@ export const Contact = () => {
               className="text-muted-foreground hover:text-primary transition-colors p-2"
               aria-label="Threads"
             >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
-              </svg>
+              <img src={threadsIcon} alt="Threads" className="w-6 h-6" />
+            </a>
+            <a
+              href={content.social.steam}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors p-2"
+              aria-label="Steam"
+            >
+              <img src={steamIcon} alt="Steam" className="w-6 h-6" />
+            </a>
+            <a
+              href={content.social.bluesky}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors p-2"
+              aria-label="Bluesky"
+            >
+              <img src={blueskyIcon} alt="Bluesky" className="w-6 h-6" />
+            </a>
+            <a
+              href={content.social.pressKit}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors p-2"
+              aria-label="Press Kit"
+            >
+              <img src={presskitIcon} alt="Press Kit" className="w-6 h-6" />
             </a>
           </div>
         </div>
