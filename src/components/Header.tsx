@@ -86,13 +86,21 @@ export const Header = () => {
               <DropdownMenuContent align="end" className="bg-card border-border">
                 <DropdownMenuItem 
                   onClick={() => setLanguage('en')}
-                  className="cursor-pointer hover:bg-accent"
+                  className={`cursor-pointer ${
+                    language === 'en' 
+                      ? 'text-primary font-semibold' 
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
                 >
                   English
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => setLanguage('pt')}
-                  className="cursor-pointer hover:bg-accent"
+                  className={`cursor-pointer ${
+                    language === 'pt' 
+                      ? 'text-primary font-semibold' 
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
                 >
                   Português
                 </DropdownMenuItem>
