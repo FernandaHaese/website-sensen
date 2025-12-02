@@ -152,8 +152,8 @@ export const Header = () => {
                       }}
                       className={`text-left py-2 px-3 rounded transition-colors ${
                         language === 'en' 
-                          ? 'bg-accent text-primary font-semibold' 
-                          : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                          ? 'text-primary font-semibold' 
+                          : 'text-muted-foreground hover:text-foreground'
                       }`}
                     >
                       English
@@ -166,8 +166,8 @@ export const Header = () => {
                       }}
                       className={`text-left py-2 px-3 rounded transition-colors ${
                         language === 'pt' 
-                          ? 'bg-accent text-primary font-semibold' 
-                          : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                          ? 'text-primary font-semibold' 
+                          : 'text-muted-foreground hover:text-foreground'
                       }`}
                     >
                       Português
