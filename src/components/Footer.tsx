@@ -1,11 +1,10 @@
-import { useTranslation } from '@/hooks/useLanguage';
-import content from '@/data/content.json';
+import { useTranslation } from 'react-i18next';
 import logo from '@/assets/logo.png';
 
-export const Footer = () => {
-  const { t, language } = useTranslation();
+export const Footer: React.FC = () => {
+  const { t } = useTranslation();
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80;
@@ -21,49 +20,54 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div>
-            <img src={logo} alt={content.site.name} className="h-10 w-auto rounded-lg" />
+            <img 
+              src={logo} 
+              alt={t('site.name')} 
+              className="h-10 w-auto rounded-lg" 
+              loading="lazy"
+            />
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex flex-wrap justify-center gap-6">
+          <nav className="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
             <button
               onClick={() => scrollToSection('home')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {content.nav.home[language]}
+              {t('nav.home')}
             </button>
             <button
               onClick={() => scrollToSection('about')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {content.nav.about[language]}
+              {t('nav.about')}
             </button>
             <button
               onClick={() => scrollToSection('games')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {content.nav.games[language]}
+              {t('nav.games')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {content.nav.contact[language]}
+              {t('nav.contact')}
             </button>
             <a
-              href={content.nav.pressLink}
+              href={t('nav.pressLink')}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {content.nav.press[language]}
+              {t('nav.press')}
             </a>
           </nav>
         </div>
 
         {/* Copyright */}
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          {t(content.footer.copyright)}
+          {t('footer.copyright')}
         </div>
       </div>
     </footer>

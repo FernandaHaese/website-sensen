@@ -1,12 +1,11 @@
 import { Button } from '@/components/ui/button';
-import { useTranslation } from '@/hooks/useLanguage';
-import content from '@/data/content.json';
+import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
 
-export const Hero = () => {
+export const Hero: React.FC = () => {
   const { t } = useTranslation();
 
-  const scrollToGames = () => {
+  const scrollToGames = (): void => {
     const element = document.getElementById('games');
     if (element) {
       const offset = 80;
@@ -29,11 +28,11 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in">
-          {t(content.hero.title)}
+          {t('hero.title')}
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-12 animate-fade-in" 
            style={{ animationDelay: '0.2s' }}>
-          {t(content.hero.subtitle)}
+          {t('hero.subtitle')}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" 
@@ -43,8 +42,9 @@ export const Hero = () => {
             variant="default"
             onClick={scrollToGames}
             className="text-lg px-8 py-6"
+            aria-label={t('hero.cta.games')}
           >
-            {t(content.hero.cta.games)}
+            {t('hero.cta.games')}
           </Button>
           <Button
             size="lg"
@@ -52,8 +52,13 @@ export const Hero = () => {
             asChild
             className="text-lg px-8 py-6"
           >
-            <a href={content.social.steam} target="_blank" rel="noopener noreferrer">
-              {t(content.hero.cta.steam)}
+            <a 
+              href={t('social.steam')} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={`${t('hero.cta.steam')} - ${t('site.name')}`}
+            >
+              {t('hero.cta.steam')}
             </a>
           </Button>
         </div>
