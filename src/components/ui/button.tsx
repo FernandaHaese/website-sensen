@@ -15,12 +15,6 @@ const buttonVariants = cva(
           "hover:bg-[hsl(var(--btn-bg-hover))] hover:-translate-y-[1px] " +
           "active:bg-[hsl(var(--btn-bg-pressed))] active:translate-y-0 active:shadow-[var(--btn-shadow-pressed)]",
         
-        // Primary with gradient for hero sections
-        gradient:
-          "bg-gradient-to-b from-[hsl(var(--btn-bg))] to-[hsl(var(--btn-bg))]/88 text-[hsl(var(--btn-text-on-brand))] shadow-[var(--btn-shadow)] border-[1.5px] border-transparent " +
-          "hover:from-[hsl(var(--btn-bg-hover))] hover:to-[hsl(var(--btn-bg-hover))]/88 hover:-translate-y-[1px] " +
-          "active:from-[hsl(var(--btn-bg-pressed))] active:to-[hsl(var(--btn-bg-pressed))]/88 active:translate-y-0 active:shadow-[var(--btn-shadow-pressed)]",
-        
         // Secondary / Outline
         outline: 
           "bg-card text-[hsl(var(--btn-text))] border-[1.5px] border-[hsl(var(--btn-outline))] " +

@@ -39,7 +39,7 @@ export const Hero = () => {
              style={{ animationDelay: '0.4s' }}>
           <Button
             size="lg"
-            variant="gradient"
+            variant="default"
             onClick={scrollToGames}
             className="text-lg px-8 py-6"
           >
