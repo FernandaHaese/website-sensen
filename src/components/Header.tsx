@@ -143,7 +143,7 @@ export const Header = () => {
                     isLanguageMenuOpen ? 'max-h-24 opacity-100 mt-2' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="flex flex-col space-y-2 pl-4 border-l-2 border-border">
+                  <div className="flex flex-col space-y-2 pl-4">
                     <button
                       onClick={() => {
                         setLanguage('en');
