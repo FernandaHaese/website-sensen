@@ -11,17 +11,15 @@ interface GameCardProps {
   index: number;
 }
 
-export const GameCard = ({ 
+export const GameCard: React.FC<GameCardProps> = ({ 
   title, 
-  description, 
   image, 
-  video, 
   steamUrl, 
   pressKitUrl,
   index 
-}: GameCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [imageError, setImageError] = useState(false);
+}) => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [imageError, setImageError] = useState<boolean>(false);
 
   return (
     <div
@@ -30,50 +28,27 @@ export const GameCard = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Media Container */}
       <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
-        {/* Image - shown by default */}
-        {!isHovered && !imageError && (
+        {!imageError && (
           <img
             src={image}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             onError={() => setImageError(true)}
+            loading="lazy"
           />
         )}
-        
-        {/* Darkening effect on hover */}
-        {isHovered && (
-          <div className="absolute inset-0 bg-black/40" />
-        )}
+        {isHovered && <div className="absolute inset-0 bg-black/40" />}
       </div>
 
-      {/* Content */}
       <div className="p-6">
-        <h3 className="text-lg font-bold text-foreground mb-4">
-          {title}
-        </h3>
-        
-        {/* Action Buttons */}
+        <h3 className="text-lg font-bold text-foreground mb-4">{title}</h3>
         <div className="flex gap-3">
-          <Button
-            asChild
-            size="sm"
-            className="flex-1"
-          >
-            <a href={steamUrl} target="_blank" rel="noopener noreferrer">
-              Steam
-            </a>
+          <Button asChild size="sm" className="flex-1">
+            <a href={steamUrl} target="_blank" rel="noopener noreferrer">Steam</a>
           </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="sm"
-            className="flex-1"
-          >
-            <a href={pressKitUrl} target="_blank" rel="noopener noreferrer">
-              Press Kit
-            </a>
+          <Button asChild variant="outline" size="sm" className="flex-1">
+            <a href={pressKitUrl} target="_blank" rel="noopener noreferrer">Press Kit</a>
           </Button>
         </div>
       </div>

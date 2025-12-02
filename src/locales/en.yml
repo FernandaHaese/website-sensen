@@ -1,0 +1,128 @@
+site:
+  name: "Sensen Games"
+  tagline: "Creating compelling, accessible arcade games"
+  description: "Indie game studio focused on challenging arcade games for players with limited time"
+
+nav:
+  home: "Home"
+  about: "About"
+  games: "Games"
+  contact: "Contact"
+  press: "Press"
+  pressLink: "https://drive.google.com/drive/u/0/folders/1L_eGgQdwwhAiC6X7qb9LjyxprvuhX3Ma"
+
+hero:
+  title: "Hi, we are Sensen Games!"
+  subtitle: "Creating compelling, accessible arcade games"
+  cta:
+    games: "Our Games"
+    steam: "Steam"
+
+about:
+  title: "A little bit about us"
+  description: "We are tiny, just two guys trying very hard to make something good and fun to compete for that few minutes of attention we can get on today's frenetic world. If we seem too slow, it's on purpose. The last time we did a rush job, we made a complete mess. Because of that, we've adopted a more careful rhythm. Yes, we're still slow, but also more sure of what we're doing and the final result. Yes, yes, it's still a mess sometimes, but at least now it's a mess with intention. We know what we're doing, we just can't do it very fast."
+
+team:
+  - name: "John Doe"
+    role: "Game Designer"
+    image: "/images/team/member1.jpg"
+  - name: "Jane Smith"
+    role: "Programmer"
+    image: "/images/team/member2.jpg"
+
+games:
+  title: "Our Games"
+  description: "Learn more directly at a level more compelling of the game as depicted in a manner that our more liberal community."
+  seeMore: "See more"
+  catalog:
+    - id: "game1"
+      title: "Game Title 1"
+      description: "An exciting arcade adventure"
+      image: "/images/games/game1.jpg"
+      video: "/videos/game1.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+    - id: "game2"
+      title: "Game Title 2"
+      description: "Fast-paced action gameplay"
+      image: "/images/games/game2.jpg"
+      video: "/videos/game2.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+    - id: "game3"
+      title: "Game Title 3"
+      description: "Challenging puzzle mechanics"
+      image: "/images/games/game3.jpg"
+      video: "/videos/game3.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+    - id: "game4"
+      title: "Game Title 4"
+      description: "Retro-inspired platformer"
+      image: "/images/games/game4.jpg"
+      video: "/videos/game4.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+    - id: "game5"
+      title: "Game Title 5"
+      description: "Intense boss battles"
+      image: "/images/games/game5.jpg"
+      video: "/videos/game5.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+    - id: "game6"
+      title: "Game Title 6"
+      description: "Strategic gameplay elements"
+      image: "/images/games/game6.jpg"
+      video: "/videos/game6.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+    - id: "game7"
+      title: "Game Title 7"
+      description: "Unique art style and visuals"
+      image: "/images/games/game7.jpg"
+      video: "/videos/game7.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+    - id: "game8"
+      title: "Game Title 8"
+      description: "Cooperative multiplayer fun"
+      image: "/images/games/game8.jpg"
+      video: "/videos/game8.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+    - id: "game9"
+      title: "Game Title 9"
+      description: "Endless replayability"
+      image: "/images/games/game9.jpg"
+      video: "/videos/game9.mp4"
+      steamUrl: "https://store.steampowered.com/"
+      pressKitUrl: "#"
+
+contact:
+  title: "Connect with us!"
+  description: "Get the latest news, cool stuff and more! Never spam. Just pure love in the format of pixels."
+  form:
+    placeholder: "Enter your email"
+    button: "Subscribe"
+    success: "Thanks for subscribing!"
+    error: "Please enter a valid email"
+
+footer:
+  copyright: "Copyright © Sensen Games All Rights Reserved."
+
+social:
+  steam: "https://store.steampowered.com/"
+  facebook: "https://facebook.com/"
+  twitter: "https://twitter.com/"
+  instagram: "https://instagram.com/"
+  bluesky: "https://bsky.app/"
+  threads: "https://threads.net/"
+
+seo:
+  home:
+    title: "Sensen Games - Accessible Arcade Games"
+    description: "Creating compelling, accessible arcade games for time-constrained players. Brazilian indie studio focused on challenging experiences."
+  games:
+    title: "Our Games - Sensen Games"
+    description: "Explore our complete catalog of arcade games. Challenging and fun experiences for all players."
