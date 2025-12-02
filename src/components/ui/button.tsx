@@ -11,25 +11,25 @@ const buttonVariants = cva(
       variant: {
         // Primary / Filled - CTA principal
         default: 
-          "bg-[hsl(var(--btn-bg))] text-[hsl(var(--btn-text-on-brand))] shadow-[var(--btn-shadow)] border-[1.5px] border-transparent " +
-          "hover:bg-[hsl(var(--btn-bg-hover))] hover:-translate-y-[1px] " +
-          "active:bg-[hsl(var(--btn-bg-pressed))] active:translate-y-0 active:shadow-[var(--btn-shadow-pressed)]",
+          "bg-btn-bg text-btn-text-on-brand shadow-[var(--btn-shadow)] border-[1.5px] border-transparent " +
+          "hover:bg-btn-bg-hover hover:-translate-y-[1px] " +
+          "active:bg-btn-bg-pressed active:translate-y-0 active:shadow-[var(--btn-shadow-pressed)]",
         
         // Secondary / Outline
         outline: 
-          "bg-card text-[hsl(var(--btn-text))] border-[1.5px] border-[hsl(var(--btn-outline))] " +
-          "hover:bg-[hsl(var(--btn-ghost-hover))] hover:border-[hsl(var(--btn-outline-hover))] hover:-translate-y-[1px] " +
+          "bg-card text-btn-text border-[1.5px] border-btn-outline " +
+          "hover:bg-[hsl(var(--btn-ghost-hover))] hover:border-btn-outline-hover hover:-translate-y-[1px] " +
           "active:bg-[hsl(var(--btn-ghost-hover))] active:translate-y-0",
         
         // Outline with brand glow (dupla borda)
         "outline-glow":
-          "bg-card text-[hsl(var(--btn-bg))] border-[1.5px] border-[hsl(var(--btn-bg))] " +
+          "bg-card text-btn-bg border-[1.5px] border-btn-bg " +
           "hover:shadow-[0_0_0_4px_rgba(245,110,15,0.15)] hover:-translate-y-[1px] " +
           "active:shadow-[0_0_0_4px_rgba(245,110,15,0.15)] active:translate-y-0",
         
         // Ghost / Text
         ghost: 
-          "bg-transparent text-[hsl(var(--btn-text))] border-[1.5px] border-transparent " +
+          "bg-transparent text-btn-text border-[1.5px] border-transparent " +
           "hover:bg-[hsl(var(--btn-ghost-hover))] " +
           "active:bg-[hsl(var(--btn-ghost-hover))]/80",
         
@@ -41,7 +41,7 @@ const buttonVariants = cva(
         
         // Link style (mantido para compatibilidade)
         link: 
-          "text-[hsl(var(--btn-bg))] underline-offset-4 hover:underline hover:text-[hsl(var(--btn-bg-hover))]",
+          "text-btn-bg underline-offset-4 hover:underline hover:text-btn-bg-hover",
       },
       size: {
         // Large: 48px
