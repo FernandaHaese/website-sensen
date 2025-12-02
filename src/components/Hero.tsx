@@ -61,7 +61,9 @@ export const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-primary-foreground" strokeWidth={2.5} />
+        <div className="w-12 h-12 border-2 border-primary-foreground rounded-full flex items-center justify-center">
+          <ChevronDown className="w-6 h-6 text-primary-foreground" strokeWidth={2.5} />
+        </div>
       </div>
     </section>
   );
