@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useLanguage';
 import content from '@/data/content.json';
+import { ChevronDown } from 'lucide-react';
 
 export const Hero = () => {
   const { t } = useTranslation();
@@ -60,9 +61,7 @@ export const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-primary-foreground rounded-full" />
-        </div>
+        <ChevronDown className="w-8 h-8 text-primary-foreground" strokeWidth={2.5} />
       </div>
     </section>
   );
