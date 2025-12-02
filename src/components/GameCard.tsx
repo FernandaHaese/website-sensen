@@ -50,9 +50,9 @@ export const GameCard = ({
 
       {/* Content */}
       <div className="p-6">
-        <p className="text-muted-foreground mb-4 line-clamp-2 min-h-[3rem]">
-          {description}
-        </p>
+        <h3 className="text-xl font-bold text-foreground mb-4">
+          {title}
+        </h3>
         
         {/* Action Buttons */}
         <div className="flex gap-3">
