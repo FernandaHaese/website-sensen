@@ -23,10 +23,10 @@ about:
   description: "We are tiny, just two guys trying very hard to make something good and fun to compete for that few minutes of attention we can get on today's frenetic world. If we seem too slow, it's on purpose. The last time we did a rush job, we made a complete mess. Because of that, we've adopted a more careful rhythm. Yes, we're still slow, but also more sure of what we're doing and the final result. Yes, yes, it's still a mess sometimes, but at least now it's a mess with intention. We know what we're doing, we just can't do it very fast."
 
 team:
-  - name: "John Doe"
+  - name: "Name Here"
     role: "Game Designer"
     image: "/images/team/member1.jpg"
-  - name: "Jane Smith"
+  - name: "Name Here"
     role: "Programmer"
     image: "/images/team/member2.jpg"
 
