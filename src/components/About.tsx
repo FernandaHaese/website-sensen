@@ -25,9 +25,9 @@ export const About: React.FC = () => {
 
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {team.map((member, index) => (
+          {Array.isArray(team) && team.slice(0, 2).map((member, index) => (
             <TeamCard
-              key={member.name}
+              key={`team-member-${index}`}
               name={member.name}
               role={member.role}
               image={member.image}
