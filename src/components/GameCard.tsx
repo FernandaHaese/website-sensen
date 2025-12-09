@@ -13,6 +13,7 @@ interface GameCardProps {
 
 export const GameCard: React.FC<GameCardProps> = ({ 
   title, 
+  description,
   image, 
   steamUrl, 
   pressKitUrl,
@@ -42,7 +43,8 @@ export const GameCard: React.FC<GameCardProps> = ({
       </div>
 
       <div className="p-6">
-        <h3 className="text-lg font-bold text-foreground mb-4">{title}</h3>
+        <h3 className="text-lg font-bold text-foreground mb-2">{title}</h3>
+        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{description}</p>
         <div className="flex gap-3">
           <Button asChild size="sm" className="flex-1">
             <a href={steamUrl} target="_blank" rel="noopener noreferrer">Steam</a>
