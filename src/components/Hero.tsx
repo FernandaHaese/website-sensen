@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
+import heroVideo from '@/assets/hero-background.mp4';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -19,10 +20,17 @@ export const Hero: React.FC = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-accent z-10" 
-             style={{ background: 'var(--hero-gradient)' }} />
-        {/* Placeholder for video - will be replaced with actual video */}
-        <div className="w-full h-full bg-primary/20" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Content */}
