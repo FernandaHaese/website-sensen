@@ -74,8 +74,8 @@ export const Hero: React.FC = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center animate-bounce">
-        <div className="w-12 h-12 border-2 border-primary-foreground rounded-full flex items-center justify-center">
-          <ChevronDown className="w-6 h-6 text-primary-foreground" strokeWidth={2.5} />
+        <div className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center">
+          <ChevronDown className="w-6 h-6 text-white" strokeWidth={2.5} />
         </div>
       </div>
     </section>
