@@ -35,10 +35,10 @@ export const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in">
           {t('hero.title')}
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-12 animate-fade-in" 
+        <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-12 animate-fade-in" 
            style={{ animationDelay: '0.2s' }}>
           {t('hero.subtitle')}
         </p>
