@@ -12,6 +12,7 @@ interface Game {
   title: string;
   description: string;
   image: string;
+  gif?: string;
   video: string;
   steamUrl: string;
   pressKitUrl: string;

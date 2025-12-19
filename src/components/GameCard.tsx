@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
 
 interface GameCardProps {
   title: string;
   description: string;
   image: string;
+  gif?: string;
   video: string;
   steamUrl: string;
   pressKitUrl: string;
@@ -14,13 +16,17 @@ interface GameCardProps {
 export const GameCard: React.FC<GameCardProps> = ({ 
   title, 
   description,
-  image, 
+  image,
+  gif,
   steamUrl, 
   pressKitUrl,
   index 
 }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [imageError, setImageError] = useState<boolean>(false);
+  const [gifError, setGifError] = useState<boolean>(false);
+
+  const showGif = isHovered && gif && !gifError;
 
   return (
     <div
@@ -30,16 +36,35 @@ export const GameCard: React.FC<GameCardProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
+        {/* Static image - always rendered, fades out on hover */}
         {!imageError && (
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            className={cn(
+              "w-full h-full object-cover transition-opacity duration-300",
+              showGif ? "opacity-0" : "opacity-100"
+            )}
             onError={() => setImageError(true)}
             loading="lazy"
           />
         )}
-        {isHovered && <div className="absolute inset-0 bg-black/40" />}
+        
+        {/* GIF - preloaded, fades in on hover */}
+        {gif && !gifError && (
+          <img
+            src={gif}
+            alt={`${title} gameplay`}
+            className={cn(
+              "absolute inset-0 w-full h-full object-cover transition-opacity duration-300",
+              showGif ? "opacity-100" : "opacity-0"
+            )}
+            onError={() => setGifError(true)}
+            loading="lazy"
+          />
+        )}
+        
+        {isHovered && <div className="absolute inset-0 bg-black/20 transition-opacity duration-300" />}
       </div>
 
       <div className="p-6">
