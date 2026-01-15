@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next';
-import logo from '@/assets/logo.png';
+import { useTranslation } from "react-i18next";
+import logo from "/src/assets/Logotipo/logo.png";
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
@@ -20,54 +20,57 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div>
-            <img 
-              src={logo} 
-              alt={t('site.name')} 
-              className="h-10 w-auto rounded-lg" 
+            <img
+              src={logo}
+              alt={t("site.name")}
+              className="h-10 w-auto rounded-lg"
               loading="lazy"
             />
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
+          <nav
+            className="flex flex-wrap justify-center gap-6"
+            aria-label="Footer navigation"
+          >
             <button
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection("home")}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {t('nav.home')}
+              {t("nav.home")}
             </button>
             <button
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection("about")}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {t('nav.about')}
+              {t("nav.about")}
             </button>
             <button
-              onClick={() => scrollToSection('games')}
+              onClick={() => scrollToSection("games")}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {t('nav.games')}
+              {t("nav.games")}
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {t('nav.contact')}
+              {t("nav.contact")}
             </button>
             <a
-              href={t('nav.pressLink')}
+              href={t("nav.pressLink")}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              {t('nav.press')}
+              {t("nav.press")}
             </a>
           </nav>
         </div>
 
         {/* Copyright */}
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          {t('footer.copyright')}
+          {t("footer.copyright")}
         </div>
       </div>
     </footer>
