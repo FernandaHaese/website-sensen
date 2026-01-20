@@ -175,8 +175,6 @@ bun dev
 
 ---
 
-<div align="center">
-
 <!--
 <img src="src/assets/Logotipo/logo_arredondado.png" alt="Sensen Games" width="60"/>
 -->
@@ -263,6 +261,6 @@ Depois, abra um **Pull Request** no GitHub com:
 - ✅ Respeite a estrutura de pastas existente
 - ❌ Não commite arquivos de build ou node_modules
 
-**Feito com ❤️ por Sensen Games**
+---
 
-</div>
+**Feito com ❤️ por Sensen Games**
