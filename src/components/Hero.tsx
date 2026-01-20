@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
-import heroVideo from "/src/assets/Hero-background.mp4";
+import heroVideo from "/src/assets/hero-background.mp4";
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
