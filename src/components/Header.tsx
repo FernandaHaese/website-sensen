@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import logo from "/src/assets/Logotipo/logo.png";
 import {
   DropdownMenu,
@@ -104,31 +104,32 @@ export const Header: React.FC = () => {
             {/* Language Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1">
-                  {i18n.language === "en" ? "Language" : "Idioma"}
-                  <ChevronDown size={16} />
+                <button className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1.5">
+                  <Globe size={18} className="text-muted-foreground" />
+                  {i18n.language === "en" ? "English" : "Português"}
+                  <ChevronDown size={14} />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="end"
-                className="bg-card border-border"
+                className="bg-card border-border min-w-[120px]"
               >
                 <DropdownMenuItem
                   onClick={() => changeLanguage("en")}
-                  className={`cursor-pointer focus:bg-transparent ${
+                  className={`cursor-pointer ${
                     i18n.language === "en"
-                      ? "text-primary font-semibold"
-                      : "text-muted-foreground hover:text-foreground hover:bg-transparent"
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   English
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => changeLanguage("pt")}
-                  className={`cursor-pointer focus:bg-transparent ${
+                  className={`cursor-pointer ${
                     i18n.language === "pt"
-                      ? "text-primary font-semibold"
-                      : "text-muted-foreground hover:text-foreground hover:bg-transparent"
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   Português
@@ -173,12 +174,13 @@ export const Header: React.FC = () => {
               <div>
                 <button
                   onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-                  className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1 text-left w-full"
+                  className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1.5 text-left w-full"
                   aria-expanded={isLanguageMenuOpen}
                 >
-                  {i18n.language === "en" ? "Language" : "Idioma"}
+                  <Globe size={18} className="text-muted-foreground" />
+                  {i18n.language === "en" ? "English" : "Português"}
                   <ChevronDown
-                    size={16}
+                    size={14}
                     className={`transition-transform duration-200 ${
                       isLanguageMenuOpen ? "rotate-180" : ""
                     }`}
