@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="src/assets/Logotipo/logo.png" alt="Sensen Games Logo" width="200"/>
+<img src="src/assets/Logotipo/logo_arredondado.png" alt="Sensen Games Logo" width="200"/>
 
 # Sensen Games
 
 ### 🎮 Criando jogos arcade acessíveis e desafiadores
 
-[![Site](https://img.shields.io/badge/🌐_Site-Visitar-blue?style=for-the-badge)](https://projetosensen.lovable.app)
+[![Site](https://img.shields.io/badge/🌐_Site-Visitar-blue?style=for-the-badge)](adicionar_link_aqui)
 [![Steam](https://img.shields.io/badge/🎮_Steam-Loja-black?style=for-the-badge)](https://store.steampowered.com/developer/sensengames)
 [![Press Kit](https://img.shields.io/badge/📦_Press_Kit-Download-green?style=for-the-badge)](https://drive.google.com/drive/u/0/folders/1L_eGgQdwwhAiC6X7qb9LjyxprvuhX3Ma)
 
@@ -22,11 +22,6 @@
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Instalação](#-instalação)
 - [Scripts Disponíveis](#-scripts-disponíveis)
-- [Internacionalização](#-internacionalização)
-- [Catálogo de Jogos](#-catálogo-de-jogos)
-- [Equipe](#-equipe)
-- [Contato](#-contato)
-- [Licença](#-licença)
 
 ---
 
@@ -34,7 +29,7 @@
 
 Site oficial do estúdio indie brasileiro **Sensen Games**, dois irmãos que jogam juntos desde a era do Super Nintendo e PlayStation 1 & 2. Após anos trabalhando como programador e designer web, decidiram criar jogos no estilo que amam jogar: **desafiadores e divertidos!**
 
-> 🌐 **Demo ao vivo:** [projetosensen.lovable.app](https://projetosensen.lovable.app)
+> 🌐 **Demo ao vivo:** [adicionar_link_aqui](adicionar_link_aqui)
 
 ---
 
@@ -42,13 +37,13 @@ Site oficial do estúdio indie brasileiro **Sensen Games**, dois irmãos que jog
 
 <div align="center">
 
-| Tecnologia | Versão | Descrição |
-|:----------:|:------:|:----------|
-| ![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=white) | 18.3 | Biblioteca de interface |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=flat-square&logo=typescript&logoColor=white) | 5.6 | Tipagem estática |
-| ![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white) | 5.4 | Build tool e dev server |
-| ![Tailwind](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) | 3.4 | Framework de estilos |
-| ![i18next](https://img.shields.io/badge/i18next-25.7-26A69A?style=flat-square&logo=i18next&logoColor=white) | 25.7 | Internacionalização |
+|                                                     Tecnologia                                                      | Versão | Descrição               |
+| :-----------------------------------------------------------------------------------------------------------------: | :----: | :---------------------- |
+|        ![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=white)        |  18.3  | Biblioteca de interface |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=flat-square&logo=typescript&logoColor=white) |  5.6   | Tipagem estática        |
+|          ![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white)          |  5.4   | Build tool e dev server |
+|  ![Tailwind](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)   |  3.4   | Framework de estilos    |
+|     ![i18next](https://img.shields.io/badge/i18next-25.7-26A69A?style=flat-square&logo=i18next&logoColor=white)     |  25.7  | Internacionalização     |
 
 </div>
 
@@ -64,14 +59,14 @@ Site oficial do estúdio indie brasileiro **Sensen Games**, dois irmãos que jog
 
 ## ✨ Funcionalidades
 
-| Feature | Descrição |
-|:--------|:----------|
-| 🌐 **Bilíngue** | Suporte completo para Português e Inglês |
-| 📱 **Responsivo** | Layout adaptável para desktop e mobile |
-| 🎮 **Catálogo** | Exibição dos jogos com links para Steam |
-| 📧 **Contato** | Formulário de newsletter integrado |
-| 🔍 **SEO** | Meta tags otimizadas para buscadores |
-| 🎬 **Animações** | Transições suaves e interativas |
+| Feature           | Descrição                                |
+| :---------------- | :--------------------------------------- |
+| 🌐 **Bilíngue**   | Suporte completo para Português e Inglês |
+| 📱 **Responsivo** | Layout adaptável para desktop e mobile   |
+| 🎮 **Catálogo**   | Exibição dos jogos com links para Steam  |
+| 📧 **Contato**    | Formulário de newsletter integrado       |
+| 🔍 **SEO**        | Meta tags otimizadas para buscadores     |
+| 🎬 **Animações**  | Transições suaves e interativas          |
 
 ---
 
@@ -169,178 +164,12 @@ bun dev
 
 ## 📜 Scripts Disponíveis
 
-| Comando | Descrição |
-|:--------|:----------|
-| `npm run dev` | Inicia servidor de desenvolvimento |
-| `npm run build` | Gera build de produção |
-| `npm run preview` | Visualiza build de produção |
-| `npm run lint` | Executa verificação de código |
-
----
-
-## 🌍 Internacionalização
-
-O site suporta múltiplos idiomas através do **i18next**. Os textos estão organizados em arquivos YAML:
-
-```
-src/locales/
-├── pt.yml    # Português (idioma padrão)
-└── en.yml    # Inglês
-```
-
-### Adicionar novo idioma
-
-1. Crie um arquivo `src/locales/[codigo].yml`
-2. Copie a estrutura de `pt.yml`
-3. Traduza os textos
-4. Adicione o idioma em `src/lib/i18n.ts`
-
-### Exemplo de estrutura YAML
-
-```yaml
-nav:
-  home: "Início"
-  about: "Sobre"
-  games: "Jogos"
-  contact: "Contato"
-
-hero:
-  title: "Olá, somos a Sensen Games!"
-  subtitle: "Criando jogos arcade acessíveis"
-```
-
----
-
-## 🎮 Catálogo de Jogos
-
-<div align="center">
-
-| Jogo | Gênero | Links |
-|:-----|:-------|:------|
-| **Typomancer** | Typing RPG | [Steam](https://store.steampowered.com/app/1714300/Typomancer_in_the_Feathers_Way/) |
-| **Tybot Invasion** | Typing Runner | [Steam](https://store.steampowered.com/app/1636000/Tybot_Invasion_The_Typing_Runner/) |
-| **Tyfortress** | Typing Strategy | [Steam](https://store.steampowered.com/app/1661700/Tyfortress_Tactical_Typing/) |
-| **Sniper Ships** | Shoot'em Up | [Steam](https://store.steampowered.com/app/1555080/Sniper_Ships_Shootem_Up_on_Rails/) |
-| **Neon Ships** | Type'em Up | [Steam](https://store.steampowered.com/app/1528580/Neon_Ships_The_Typeem_Up_Shooter/) |
-| **King Bullseye** | Arcade | [Steam](https://store.steampowered.com/app/1600870/King_Bullseye_Headshot_Training/) |
-| **Smashing Spirits** | Fighting | [Steam](https://store.steampowered.com/app/1263200/Smashing_Spirits_A_Primeira_Boxeadora_Brasileira/) |
-| **Spooky Typing** | Typing Horror | [Steam](https://store.steampowered.com/app/1791870/Spooky_Typing_The_Ghost_Plague/) |
-| **Akuma Bloodrain** | Action | [Steam](https://store.steampowered.com/app/3692360/Akumas_Bloodrain/) |
-
-</div>
-
----
-
-## 👥 Equipe
-
-<div align="center">
-
-| | **Game Designer** | | **Programador** |
-|:---:|:---:|:---:|:---:|
-| | 🎨 Design de jogos | | 💻 Desenvolvimento |
-| | 🎯 Game balance | | 🔧 Implementação |
-| | 🖼️ Arte e visual | | 🌐 Web development |
-
-</div>
-
----
-
-## 📬 Contato
-
-<div align="center">
-
-[![Steam](https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/developer/sensengames)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/sensengames/)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/sensengames)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/sensengames/)
-[![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/sensengames.bsky.social)
-[![Threads](https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.com/@sensengames)
-
-</div>
-
----
-
-## 🤝 Como Contribuir
-
-Contribuições são bem-vindas! Siga os passos abaixo:
-
-### 1. Fork o repositório
-
-```bash
-# Clique no botão "Fork" no GitHub
-# ou use o GitHub CLI
-gh repo fork sensen-games/site
-```
-
-### 2. Clone seu fork
-
-```bash
-git clone https://github.com/SEU_USUARIO/site.git
-cd site
-```
-
-### 3. Crie uma branch
-
-```bash
-# Para novas funcionalidades
-git checkout -b feature/minha-feature
-
-# Para correções de bugs
-git checkout -b fix/correcao-bug
-```
-
-### 4. Faça suas alterações
-
-- Siga o padrão de código existente
-- Use **TypeScript** com tipagem estrita
-- Utilize tokens do **Tailwind** (evite cores hardcoded)
-- Mantenha componentes pequenos e focados
-
-### 5. Commit suas mudanças
-
-```bash
-# Use commits semânticos
-git commit -m "feat: adiciona nova seção de jogos"
-git commit -m "fix: corrige responsividade do header"
-git commit -m "docs: atualiza README"
-```
-
-#### Tipos de commit
-
-| Tipo | Descrição |
-|:-----|:----------|
-| `feat` | Nova funcionalidade |
-| `fix` | Correção de bug |
-| `docs` | Documentação |
-| `style` | Formatação (não altera código) |
-| `refactor` | Refatoração de código |
-| `test` | Adição de testes |
-| `chore` | Tarefas de manutenção |
-
-### 6. Push e Pull Request
-
-```bash
-git push origin feature/minha-feature
-```
-
-Depois, abra um **Pull Request** no GitHub com:
-- Título descritivo
-- Descrição das mudanças
-- Screenshots (se houver mudanças visuais)
-
-### Diretrizes
-
-- ✅ Mantenha o código limpo e legível
-- ✅ Teste suas alterações localmente
-- ✅ Atualize a documentação se necessário
-- ✅ Respeite a estrutura de pastas existente
-- ❌ Não commite arquivos de build ou node_modules
-
----
-
-## 📄 Licença
-
-Este projeto está sob licença proprietária. Todos os direitos reservados à **Sensen Games**.
+| Comando           | Descrição                          |
+| :---------------- | :--------------------------------- |
+| `npm run dev`     | Inicia servidor de desenvolvimento |
+| `npm run build`   | Gera build de produção             |
+| `npm run preview` | Visualiza build de produção        |
+| `npm run lint`    | Executa verificação de código      |
 
 ---
 
@@ -349,7 +178,5 @@ Este projeto está sob licença proprietária. Todos os direitos reservados à *
 <img src="src/assets/Logotipo/logo_arredondado.png" alt="Sensen Games" width="60"/>
 
 **Feito com ❤️ por Sensen Games**
-
-*Dois irmãos, uma paixão: jogos!*
 
 </div>
