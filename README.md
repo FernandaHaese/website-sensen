@@ -2,6 +2,7 @@
 <!--
 <img src="src/assets/Logotipo/logo_arredondado.png" alt="Sensen Games Logo" width="200"/>
 -->
+  
 # Sensen Games
 
 ### 🎮 Criando jogos arcade acessíveis e desafiadores
