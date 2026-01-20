@@ -3,8 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { toast } from "sonner";
-// Descomentar após instalar emailjs (npm install @emailjs/browser):
-// import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const SOCIAL_ICONS = [
   {
@@ -62,20 +61,24 @@ export const Contact: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
-  // Descomentar e configurar EmailJS quando tiver as credenciais:
-  // useEffect(() => {
-  //   emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  // }, []);
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const validateEmail = (email: string): boolean => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
+    return re.test(email.trim());
   };
 
   const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>
   ): Promise<void> => {
     e.preventDefault();
+
+    // Debug
+    console.log("Email value:", email);
+    console.log("Email trimmed:", email.trim());
+    console.log("Is valid?:", validateEmail(email));
 
     if (!validateEmail(email)) {
       toast.error(t("contact.form.error"));
@@ -84,32 +87,26 @@ export const Contact: React.FC = () => {
 
     setIsSubmitting(true);
 
-    // Substituir por envio real via EmailJS:
-    // try {
-    //   await emailjs.send(
-    //     import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    //     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    //     {
-    //       to_email: import.meta.env.VITE_EMAILJS_TO_EMAIL,
-    //       from_email: email,
-    //       message: `Novo cadastro de newsletter: ${email}`,
-    //     }
-    //   );
-    //   toast.success(t('contact.form.success'));
-    //   setEmail('');
-    // } catch (error) {
-    //   console.error('Erro ao enviar email:', error);
-    //   toast.error(t('contact.form.error'));
-    // } finally {
-    //   setIsSubmitting(false);
-    // }
-
-    // Simular API call (remover quando implementar EmailJS):
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          email: import.meta.env.VITE_EMAILJS_TO_EMAIL,
+          from_email: email,
+          from_name: email,
+          message: `Novo cadastro de newsletter: ${email}`,
+          reply_to: email,
+        }
+      );
       toast.success(t("contact.form.success"));
       setEmail("");
+    } catch (error) {
+      console.error("Erro ao enviar email:", error);
+      toast.error(t("contact.form.error"));
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
