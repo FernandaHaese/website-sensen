@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Button } from './ui/button';
 
 interface GameCardProps {
@@ -14,14 +14,21 @@ interface GameCardProps {
 export const GameCard: React.FC<GameCardProps> = ({ 
   title, 
   description,
-  image, 
+  image,
+  video,
   steamUrl, 
   pressKitUrl,
   index 
 }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [imageError, setImageError] = useState<boolean>(false);
 
+
+   const gifSrc = useMemo(() => {
+    if (!video) return "";
+    return isHovered ? `${video}?t=${Date.now()}` : "";
+  }, ["", isHovered]);
+
+  
   return (
     <div
       className="group relative bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-fade-in"
@@ -30,15 +37,23 @@ export const GameCard: React.FC<GameCardProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
-        {!imageError && (
+        {!isHovered && (
           <img
             src={image}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-            onError={() => setImageError(true)}
+            
             loading="lazy"
           />
         )}
+        {isHovered && video &&(
+          <img
+            src={gifSrc}
+            alt={`${title} gameplay`}
+            className="w-full h-full object-cover"
+            />
+        )}
+        
         {isHovered && <div className="absolute inset-0 bg-black/40" />}
       </div>
 
