@@ -25,10 +25,10 @@ about:
 team:
   - name: "Name Here"
     role: "Game Designer"
-    image: ""
+    image: "/src/Assets/Equipe/GameDesigner.jpg"
   - name: "Name Here"
     role: "Programmer"
-    image: ""
+    image: "/src/Assets/Equipe/GameDev.jpg"
 
 games:
   title: "Our Games"
