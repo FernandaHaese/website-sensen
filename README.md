@@ -1,65 +1,277 @@
-# Bem-vindo ao site da Sensen
+<div align="center">
 
-## Informações do projeto
+<img src="src/assets/Logotipo/logo.png" alt="Sensen Games Logo" width="200"/>
 
-## Como posso editar este código?
+# Sensen Games
 
-Existem várias maneiras de editar seu aplicativo.
+### 🎮 Criando jogos arcade acessíveis e desafiadores
 
-**Use sua IDE preferida**
+[![Site](https://img.shields.io/badge/🌐_Site-Visitar-blue?style=for-the-badge)](https://projetosensen.lovable.app)
+[![Steam](https://img.shields.io/badge/🎮_Steam-Loja-black?style=for-the-badge)](https://store.steampowered.com/developer/sensengames)
+[![Press Kit](https://img.shields.io/badge/📦_Press_Kit-Download-green?style=for-the-badge)](https://drive.google.com/drive/u/0/folders/1L_eGgQdwwhAiC6X7qb9LjyxprvuhX3Ma)
 
-Se você quiser trabalhar localmente usando sua própria IDE, você pode clonar este repositório e enviar as alterações. As alterações enviadas serão refletidas no repositório.
+</div>
 
-O único requisito é ter o Node.js e o npm instalados - [instale com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Siga estes passos:
+## 📋 Índice
 
-```sh
+- [Sobre](#-sobre)
+- [Tecnologias](#-tecnologias)
+- [Funcionalidades](#-funcionalidades)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Instalação](#-instalação)
+- [Scripts Disponíveis](#-scripts-disponíveis)
+- [Internacionalização](#-internacionalização)
+- [Catálogo de Jogos](#-catálogo-de-jogos)
+- [Equipe](#-equipe)
+- [Contato](#-contato)
+- [Licença](#-licença)
 
-#Passo 1: Clone o repositório usando a URL Git do projeto.
+---
 
-git clone <SUA_URL_GIT>
+## 🎯 Sobre
 
-# Passo 2: Navegue até o diretório do projeto.
+Site oficial do estúdio indie brasileiro **Sensen Games**, dois irmãos que jogam juntos desde a era do Super Nintendo e PlayStation 1 & 2. Após anos trabalhando como programador e designer web, decidiram criar jogos no estilo que amam jogar: **desafiadores e divertidos!**
 
-cd <NOME_DO_SEU_PROJETO>
+> 🌐 **Demo ao vivo:** [projetosensen.lovable.app](https://projetosensen.lovable.app)
 
-#Passo 3: Instale as dependências necessárias.
+---
 
-npm i
+## 🛠 Tecnologias
 
-# Passo 4: Inicie o servidor de desenvolvimento com recarregamento automático e pré-visualização instantânea.
+<div align="center">
 
-npm run dev
+| Tecnologia | Versão | Descrição |
+|:----------:|:------:|:----------|
+| ![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=white) | 18.3 | Biblioteca de interface |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=flat-square&logo=typescript&logoColor=white) | 5.6 | Tipagem estática |
+| ![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white) | 5.4 | Build tool e dev server |
+| ![Tailwind](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) | 3.4 | Framework de estilos |
+| ![i18next](https://img.shields.io/badge/i18next-25.7-26A69A?style=flat-square&logo=i18next&logoColor=white) | 25.7 | Internacionalização |
+
+</div>
+
+### Outras Bibliotecas
+
+- **React Router DOM** - Navegação SPA
+- **Shadcn/ui** - Componentes de UI
+- **React Helmet Async** - SEO e meta tags
+- **Lucide React** - Ícones
+- **EmailJS** - Envio de emails
+
+---
+
+## ✨ Funcionalidades
+
+| Feature | Descrição |
+|:--------|:----------|
+| 🌐 **Bilíngue** | Suporte completo para Português e Inglês |
+| 📱 **Responsivo** | Layout adaptável para desktop e mobile |
+| 🎮 **Catálogo** | Exibição dos jogos com links para Steam |
+| 📧 **Contato** | Formulário de newsletter integrado |
+| 🔍 **SEO** | Meta tags otimizadas para buscadores |
+| 🎬 **Animações** | Transições suaves e interativas |
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```
+sensen-games/
+├── 📂 public/
+│   └── 📂 Jogos/              # Assets estáticos dos jogos
+│       ├── 📂 Akuma Bloodrain/
+│       ├── 📂 King Bullseye/
+│       ├── 📂 Neon Ships/
+│       └── ...
+│
+├── 📂 src/
+│   ├── 📂 assets/             # Imagens e vídeos importados
+│   │   ├── 📂 Equipe/         # Fotos da equipe
+│   │   ├── 📂 Favicon/        # Ícones do site
+│   │   ├── 📂 Icones/         # Ícones de redes sociais
+│   │   ├── 📂 Jogos/          # Assets dos jogos
+│   │   └── 📂 Logotipo/       # Logos do estúdio
+│   │
+│   ├── 📂 components/         # Componentes React
+│   │   ├── 📂 ui/             # Componentes Shadcn/ui
+│   │   ├── 📄 Header.tsx      # Navegação e seletor de idioma
+│   │   ├── 📄 Hero.tsx        # Seção principal com vídeo
+│   │   ├── 📄 About.tsx       # Sobre o estúdio
+│   │   ├── 📄 Games.tsx       # Catálogo de jogos
+│   │   ├── 📄 GameCard.tsx    # Card individual de jogo
+│   │   ├── 📄 Contact.tsx     # Formulário de contato
+│   │   ├── 📄 Footer.tsx      # Rodapé com redes sociais
+│   │   └── 📄 SEO.tsx         # Componente de meta tags
+│   │
+│   ├── 📂 hooks/              # Custom hooks
+│   │   ├── 📄 use-mobile.tsx  # Detecção de dispositivo
+│   │   └── 📄 use-toast.ts    # Sistema de notificações
+│   │
+│   ├── 📂 lib/                # Utilitários
+│   │   ├── 📄 i18n.ts         # Configuração de idiomas
+│   │   └── 📄 utils.ts        # Funções auxiliares
+│   │
+│   ├── 📂 locales/            # Arquivos de tradução
+│   │   ├── 📄 pt.yml          # Português (padrão)
+│   │   └── 📄 en.yml          # Inglês
+│   │
+│   ├── 📂 pages/              # Páginas da aplicação
+│   │   ├── 📄 Index.tsx       # Página inicial
+│   │   ├── 📄 Games.tsx       # Página de jogos
+│   │   └── 📄 NotFound.tsx    # Página 404
+│   │
+│   ├── 📄 App.tsx             # Componente principal
+│   ├── 📄 App.css             # Estilos globais
+│   ├── 📄 index.css           # Configuração Tailwind
+│   └── 📄 main.tsx            # Ponto de entrada
+│
+├── 📄 index.html              # HTML principal
+├── 📄 tailwind.config.ts      # Configuração Tailwind
+├── 📄 vite.config.ts          # Configuração Vite
+└── 📄 package.json            # Dependências
+```
 
-**Edite um arquivo diretamente no GitHub**
+---
 
-- Navegue até o(s) arquivo(s) desejado(s).
+## 🚀 Instalação
 
-- Clique no botão "Editar" (ícone de lápis) no canto superior direito da visualização do arquivo.
+### Pré-requisitos
 
-- Faça suas alterações e confirme-as.
+- [Node.js](https://nodejs.org/) (v18 ou superior)
+- [npm](https://www.npmjs.com/) ou [bun](https://bun.sh/)
 
-**Use o GitHub Codespaces**
+### Passo a passo
 
-- Navegue até a página principal do seu repositório.
+```bash
+# 1. Clone o repositório
+git clone <URL_DO_REPOSITORIO>
 
-- Clique no botão "Código" (botão verde) próximo ao canto superior direito.
+# 2. Entre na pasta do projeto
+cd sensen-games
 
-- Selecione a aba "Codespaces".
+# 3. Instale as dependências
+npm install
+# ou
+bun install
 
-- Clique em "Novo codespace" para iniciar um novo ambiente Codespace.
+# 4. Inicie o servidor de desenvolvimento
+npm run dev
+# ou
+bun dev
 
-- Edite os arquivos diretamente no Codespace e confirme e envie suas alterações quando terminar.
+# 5. Acesse no navegador
+# http://localhost:5173
+```
 
-## Quais tecnologias são usadas neste projeto?
+---
 
-Este projeto foi desenvolvido com:
+## 📜 Scripts Disponíveis
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+| Comando | Descrição |
+|:--------|:----------|
+| `npm run dev` | Inicia servidor de desenvolvimento |
+| `npm run build` | Gera build de produção |
+| `npm run preview` | Visualiza build de produção |
+| `npm run lint` | Executa verificação de código |
+
+---
+
+## 🌍 Internacionalização
+
+O site suporta múltiplos idiomas através do **i18next**. Os textos estão organizados em arquivos YAML:
+
+```
+src/locales/
+├── pt.yml    # Português (idioma padrão)
+└── en.yml    # Inglês
+```
+
+### Adicionar novo idioma
+
+1. Crie um arquivo `src/locales/[codigo].yml`
+2. Copie a estrutura de `pt.yml`
+3. Traduza os textos
+4. Adicione o idioma em `src/lib/i18n.ts`
+
+### Exemplo de estrutura YAML
+
+```yaml
+nav:
+  home: "Início"
+  about: "Sobre"
+  games: "Jogos"
+  contact: "Contato"
+
+hero:
+  title: "Olá, somos a Sensen Games!"
+  subtitle: "Criando jogos arcade acessíveis"
+```
+
+---
+
+## 🎮 Catálogo de Jogos
+
+<div align="center">
+
+| Jogo | Gênero | Links |
+|:-----|:-------|:------|
+| **Typomancer** | Typing RPG | [Steam](https://store.steampowered.com/app/1714300/Typomancer_in_the_Feathers_Way/) |
+| **Tybot Invasion** | Typing Runner | [Steam](https://store.steampowered.com/app/1636000/Tybot_Invasion_The_Typing_Runner/) |
+| **Tyfortress** | Typing Strategy | [Steam](https://store.steampowered.com/app/1661700/Tyfortress_Tactical_Typing/) |
+| **Sniper Ships** | Shoot'em Up | [Steam](https://store.steampowered.com/app/1555080/Sniper_Ships_Shootem_Up_on_Rails/) |
+| **Neon Ships** | Type'em Up | [Steam](https://store.steampowered.com/app/1528580/Neon_Ships_The_Typeem_Up_Shooter/) |
+| **King Bullseye** | Arcade | [Steam](https://store.steampowered.com/app/1600870/King_Bullseye_Headshot_Training/) |
+| **Smashing Spirits** | Fighting | [Steam](https://store.steampowered.com/app/1263200/Smashing_Spirits_A_Primeira_Boxeadora_Brasileira/) |
+| **Spooky Typing** | Typing Horror | [Steam](https://store.steampowered.com/app/1791870/Spooky_Typing_The_Ghost_Plague/) |
+| **Akuma Bloodrain** | Action | [Steam](https://store.steampowered.com/app/3692360/Akumas_Bloodrain/) |
+
+</div>
+
+---
+
+## 👥 Equipe
+
+<div align="center">
+
+| | **Game Designer** | | **Programador** |
+|:---:|:---:|:---:|:---:|
+| | 🎨 Design de jogos | | 💻 Desenvolvimento |
+| | 🎯 Game balance | | 🔧 Implementação |
+| | 🖼️ Arte e visual | | 🌐 Web development |
+
+</div>
+
+---
+
+## 📬 Contato
+
+<div align="center">
+
+[![Steam](https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/developer/sensengames)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/sensengames/)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/sensengames)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/sensengames/)
+[![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/sensengames.bsky.social)
+[![Threads](https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.com/@sensengames)
+
+</div>
+
+---
+
+## 📄 Licença
+
+Este projeto está sob licença proprietária. Todos os direitos reservados à **Sensen Games**.
+
+---
+
+<div align="center">
+
+<img src="src/assets/Logotipo/logo_arredondado.png" alt="Sensen Games" width="60"/>
+
+**Feito com ❤️ por Sensen Games**
+
+*Dois irmãos, uma paixão: jogos!*
+
+</div>
