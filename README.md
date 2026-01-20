@@ -183,11 +183,6 @@ bun dev
 
 Contribuições são bem-vindas! Siga os passos abaixo:
 
-### Pré-requisitos
-
-- [Node.js](https://nodejs.org/) (v18 ou superior)
-- [npm](https://www.npmjs.com/) ou [bun](https://bun.sh/)
-
 ### 1. Fork o repositório
 
 ```bash
