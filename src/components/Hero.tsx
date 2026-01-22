@@ -28,12 +28,12 @@ export const Hero: React.FC = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover blur-[2px]"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
       {/* Content */}
