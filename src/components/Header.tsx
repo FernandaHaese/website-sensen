@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Header fixo com navegação, seletor de idioma e menu mobile.
+ * 
+ * Implementa scroll suave para seções, dropdown de idiomas e
+ * menu hamburger responsivo para dispositivos móveis.
+ */
+
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
@@ -9,11 +16,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+/** Offset em pixels para compensar o header fixo durante scroll */
+const HEADER_OFFSET = 80;
+
+/** Threshold de scroll em pixels para ativar o efeito de blur no header */
+const SCROLL_THRESHOLD = 20;
+
 interface NavItem {
   labelKey: string;
   id: string;
 }
 
+/** Itens de navegação principal - ordem define exibição no menu */
 const NAV_ITEMS: NavItem[] = [
   { labelKey: "nav.home", id: "home" },
   { labelKey: "nav.about", id: "about" },
@@ -27,20 +41,23 @@ export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState<boolean>(false);
 
+  // Detecta scroll para aplicar efeito visual no header
   useEffect(() => {
     const handleScroll = (): void => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  /**
+   * Rola suavemente até uma seção e fecha o menu mobile.
+   */
   const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      const offsetPosition = elementPosition + window.pageYOffset - HEADER_OFFSET;
 
       window.scrollTo({
         top: offsetPosition,
@@ -68,7 +85,6 @@ export const Header: React.FC = () => {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <button
             onClick={() => scrollToSection("home")}
             className="hover:opacity-80 transition-opacity"
@@ -82,7 +98,7 @@ export const Header: React.FC = () => {
             />
           </button>
 
-          {/* Desktop Navigation */}
+          {/* Navegação Desktop */}
           <div className="hidden md:flex items-center space-x-8">
             {NAV_ITEMS.map((item) => (
               <button
@@ -101,7 +117,6 @@ export const Header: React.FC = () => {
               {t("nav.press")}
             </button>
 
-            {/* Language Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-1.5">
@@ -138,7 +153,7 @@ export const Header: React.FC = () => {
             </DropdownMenu>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Botão Menu Mobile */}
           <button
             className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -149,7 +164,7 @@ export const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Navegação Mobile */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col space-y-4">
@@ -170,7 +185,7 @@ export const Header: React.FC = () => {
                 {t("nav.press")}
               </button>
 
-              {/* Mobile Language Expandable Menu */}
+              {/* Seletor de idioma expansível no mobile */}
               <div>
                 <button
                   onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
@@ -187,7 +202,6 @@ export const Header: React.FC = () => {
                   />
                 </button>
 
-                {/* Language Options */}
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
                     isLanguageMenuOpen
