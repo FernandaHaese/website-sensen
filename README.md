@@ -255,7 +255,3 @@ Depois, abra um **Pull Request** no GitHub com:
 - ✅ Atualize a documentação se necessário
 - ✅ Respeite a estrutura de pastas existente
 - ❌ Não commite arquivos de build ou node_modules
-
----
-
-**Feito com ❤️ por Sensen Games**
