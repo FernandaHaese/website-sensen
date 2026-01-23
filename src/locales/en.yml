@@ -74,7 +74,7 @@ games:
       title: "Spooky Typing"
       description: "Strategic gameplay elements"
       image: "/Jogos/Spooky Typing/Imagem.png"
-      video: ""
+      video: "/Jogos/Spooky Typing/Gif.gif"
       steamUrl: "https://store.steampowered.com/app/1791870/Spooky_Typing_The_Ghost_Plague/"
       pressKitUrl: "https://drive.google.com/drive/folders/1L4I3bnwF6Fz-EA2URdP6Vr38kRt70O4J"
     - id: "game7"
