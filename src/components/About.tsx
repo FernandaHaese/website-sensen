@@ -1,8 +1,5 @@
 /**
  * @fileoverview Seção "Sobre Nós" com apresentação da equipe.
- * 
- * Exibe descrição da empresa e cards dos membros do time,
- * com dados carregados do arquivo de traduções.
  */
 
 import { useTranslation } from 'react-i18next';
@@ -14,12 +11,15 @@ interface TeamMember {
   image: string;
 }
 
-/** Quantidade máxima de membros exibidos na seção About */
-const MAX_TEAM_MEMBERS_DISPLAYED = 2;
+const MAX_VISIBLE_TEAM_MEMBERS = 2;
 
 export const About: React.FC = () => {
   const { t } = useTranslation();
-  const team = t('team', { returnObjects: true }) as TeamMember[];
+  const teamMembers = t('team', { returnObjects: true }) as TeamMember[];
+
+  if (!Array.isArray(teamMembers)) return null;
+
+  const visibleMembers = teamMembers.slice(0, MAX_VISIBLE_TEAM_MEMBERS);
 
   return (
     <section id="about" className="bg-background">
@@ -34,9 +34,9 @@ export const About: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {Array.isArray(team) && team.slice(0, MAX_TEAM_MEMBERS_DISPLAYED).map((member, index) => (
+          {visibleMembers.map((member, index) => (
             <TeamCard
-              key={`team-member-${index}`}
+              key={member.name}
               name={member.name}
               role={member.role}
               image={member.image}
