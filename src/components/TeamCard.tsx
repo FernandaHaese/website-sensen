@@ -3,6 +3,7 @@
  */
 
 import { useState } from "react";
+import { getAssetPath } from "@/lib/utils";
 
 interface TeamCardProps {
   name: string;
@@ -31,7 +32,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({
 
         {!hasImageFailed && (
           <img
-            src={image}
+            src={getAssetPath(image)}
             alt={name}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             onError={() => setHasImageFailed(true)}

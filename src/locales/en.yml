@@ -25,10 +25,10 @@ about:
 team:
   - name: "Name Here"
     role: "Game Designer"
-    image: "src/assets/Equipe/GameDesigner.png"
+    image: "/Equipe/GameDesigner.png"
   - name: "Hugo Roque"
     role: "Programmer"
-    image: "src/assets/Equipe/GameDev.png"
+    image: "/Equipe/GameDev.png"
 
 games:
   title: "Our Games"
