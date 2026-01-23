@@ -31,7 +31,7 @@
 
 Site oficial do estúdio indie brasileiro **Sensen Games**, dois irmãos que jogam juntos desde a era do Super Nintendo e PlayStation 1 & 2. Após anos trabalhando como programador e designer web, decidiram criar jogos no estilo que amam jogar: **desafiadores e divertidos!**
 
-> 🌐 **Demo ao vivo:** [adicionar_link_aqui](adicionar_link_aqui)
+> 🌐 **Demo ao vivo:** [fernandahaese.github.io/sensen-games/](https://fernandahaese.github.io/sensen-games/)
 
 ---
 
