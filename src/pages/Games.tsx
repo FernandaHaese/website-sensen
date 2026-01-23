@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Página completa do catálogo de jogos.
+ * 
+ * Exibe todos os jogos disponíveis sem limite,
+ * diferente da seção resumida na home.
+ */
+
 import { useTranslation } from 'react-i18next';
 import { GameCard } from '@/components/GameCard';
 import { Button } from '@/components/ui/button';

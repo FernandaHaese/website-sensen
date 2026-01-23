@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Seção de catálogo de jogos na página inicial.
+ * 
+ * Exibe uma grid limitada de jogos com botão para ver todos.
+ * Os dados são carregados do arquivo de traduções.
+ */
+
 import { useTranslation } from 'react-i18next';
 import { GameCard } from './GameCard';
 import { Button } from './ui/button';
@@ -13,11 +20,14 @@ interface Game {
   pressKitUrl: string;
 }
 
+/** Quantidade máxima de jogos exibidos na home (grid 3x3) */
+const MAX_GAMES_DISPLAYED = 9;
+
 export const Games: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const games = t('games.catalog', { returnObjects: true }) as Game[];
-  const displayedGames = games.slice(0, 9);
+  const displayedGames = games.slice(0, MAX_GAMES_DISPLAYED);
 
   return (
     <section id="games" className="bg-secondary/30">
