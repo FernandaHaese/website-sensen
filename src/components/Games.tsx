@@ -1,8 +1,5 @@
 /**
  * @fileoverview Seção de catálogo de jogos na página inicial.
- * 
- * Exibe uma grid limitada de jogos com botão para ver todos.
- * Os dados são carregados do arquivo de traduções.
  */
 
 import { useTranslation } from 'react-i18next';
@@ -20,14 +17,14 @@ interface Game {
   pressKitUrl: string;
 }
 
-/** Quantidade máxima de jogos exibidos na home (grid 3x3) */
-const MAX_GAMES_DISPLAYED = 9;
+const MAX_HOMEPAGE_GAMES = 9;
 
 export const Games: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const games = t('games.catalog', { returnObjects: true }) as Game[];
-  const displayedGames = games.slice(0, MAX_GAMES_DISPLAYED);
+  const allGames = t('games.catalog', { returnObjects: true }) as Game[];
+  
+  const featuredGames = allGames.slice(0, MAX_HOMEPAGE_GAMES);
 
   return (
     <section id="games" className="bg-secondary/30">
@@ -40,13 +37,18 @@ export const Games: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {displayedGames.map((game, index) => (
+          {featuredGames.map((game, index) => (
             <GameCard key={game.id} {...game} index={index} />
           ))}
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" onClick={() => navigate('/games')} className="px-8 hover-lift">
+          <Button 
+            size="lg" 
+            variant="outline" 
+            onClick={() => navigate('/games')} 
+            className="px-8 hover-lift"
+          >
             {t('games.seeMore')}
           </Button>
         </div>
