@@ -32,7 +32,7 @@ team:
 
 games:
   title: "Nossos Jogos"
-  description: "Aprenda mais diretamente em um nível mais atraente do jogo conforme retratado de uma maneira que nossa comunidade mais liberal."
+  description: "Explore nosso catálogo de jogos arcade desafiadores e divertidos."
   seeMore: "Ver mais"
   catalog:
     - id: "game1"

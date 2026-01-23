@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
 /** URL base do site para construção de URLs absolutas */
-const SITE_URL = 'https://sensengames.com';
+const SITE_URL = 'https://fernandahaese.github.io/sensen-games';
 
 interface SEOProps {
   /** Título da página (usa nome do site como fallback) */

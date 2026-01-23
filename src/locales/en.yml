@@ -32,7 +32,7 @@ team:
 
 games:
   title: "Our Games"
-  description: "Learn more directly at a level more compelling of the game as depicted in a manner that our more liberal community."
+  description: "Explore our catalog of challenging and fun arcade games."
   seeMore: "See more"
   catalog:
     - id: "game1"
