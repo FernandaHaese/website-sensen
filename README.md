@@ -7,7 +7,7 @@
 
 ### 🎮 Criando jogos arcade acessíveis e desafiadores
 
-[![Site](https://img.shields.io/badge/🌐_Site-Visitar-blue?style=for-the-badge)](adicionar_link_aqui)
+[![Site](https://img.shields.io/badge/🌐_Site-Visitar-blue?style=for-the-badge)](https://fernandahaese.github.io/sensen-games/)
 [![Steam](https://img.shields.io/badge/🎮_Steam-Loja-black?style=for-the-badge)](https://store.steampowered.com/developer/sensengames)
 [![Press Kit](https://img.shields.io/badge/📦_Press_Kit-Download-green?style=for-the-badge)](https://drive.google.com/drive/u/0/folders/1L_eGgQdwwhAiC6X7qb9LjyxprvuhX3Ma)
 
