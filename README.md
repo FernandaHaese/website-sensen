@@ -59,10 +59,6 @@ Site oficial do estúdio indie brasileiro **Sensen Games**, dois irmãos que jog
 - **Lucide React** - Ícones
 - **EmailJS** - Envio de emails
 
-### Utilitários
-
-- **getAssetPath()** - Resolve caminhos de assets considerando o base path do Vite, garantindo funcionamento tanto em desenvolvimento quanto no GitHub Pages
-
 ---
 
 ## ✨ Funcionalidades
