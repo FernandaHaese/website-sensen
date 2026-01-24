@@ -10,6 +10,7 @@
 [![Site](https://img.shields.io/badge/🌐_Site-Visitar-blue?style=for-the-badge)](https://fernandahaese.github.io/sensen-games/)
 [![Steam](https://img.shields.io/badge/🎮_Steam-Loja-black?style=for-the-badge)](https://store.steampowered.com/developer/sensengames)
 [![Press Kit](https://img.shields.io/badge/📦_Press_Kit-Download-green?style=for-the-badge)](https://drive.google.com/drive/u/0/folders/1L_eGgQdwwhAiC6X7qb9LjyxprvuhX3Ma)
+[![Deploy](https://github.com/fernandahaese/sensen-games/actions/workflows/deploy.yml/badge.svg)](https://github.com/fernandahaese/sensen-games/actions/workflows/deploy.yml)
 
 </div>
 
@@ -23,6 +24,7 @@
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Instalação](#-instalação)
 - [Scripts Disponíveis](#-scripts-disponíveis)
+- [Deploy](#-deploy)
 - [Contribuições](#-como-contribuir)
 
 ---
@@ -57,6 +59,10 @@ Site oficial do estúdio indie brasileiro **Sensen Games**, dois irmãos que jog
 - **Lucide React** - Ícones
 - **EmailJS** - Envio de emails
 
+### Utilitários
+
+- **getAssetPath()** - Resolve caminhos de assets considerando o base path do Vite, garantindo funcionamento tanto em desenvolvimento quanto no GitHub Pages
+
 ---
 
 ## ✨ Funcionalidades
@@ -76,58 +82,71 @@ Site oficial do estúdio indie brasileiro **Sensen Games**, dois irmãos que jog
 
 ```
 sensen-games/
+├── 📂 .github/
+│   └── 📂 workflows/
+│       └── 📄 deploy.yml         # Workflow de deploy automático
+│
 ├── 📂 public/
-│   └── 📂 Jogos/              # Assets estáticos dos jogos
-│       ├── 📂 Akuma Bloodrain/
-│       ├── 📂 King Bullseye/
-│       ├── 📂 Neon Ships/
-│       └── ...
+│   ├── 📂 Equipe/                # Fotos da equipe
+│   │   ├── 📄 GameDesigner.jpg
+│   │   └── 📄 GameDev.jpg
+│   ├── 📂 Jogos/                 # Assets estáticos dos jogos
+│   │   ├── 📂 Akuma Bloodrain/
+│   │   ├── 📂 King Bullseye/
+│   │   ├── 📂 Neon Ships/
+│   │   └── ...
+│   ├── 📂 favicon/               # Favicons e manifesto
+│   │   ├── 📄 apple-touch-icon.png
+│   │   ├── 📄 favicon-16x16.png
+│   │   ├── 📄 favicon-32x32.png
+│   │   └── 📄 site.webmanifest
+│   ├── 📄 favicon.ico            # Ícone principal
+│   ├── 📄 og-image.jpg           # Imagem Open Graph para redes sociais
+│   └── 📄 robots.txt             # Configuração para crawlers
 │
 ├── 📂 src/
-│   ├── 📂 assets/             # Imagens e vídeos importados
-│   │   ├── 📂 Equipe/         # Fotos da equipe
-│   │   ├── 📂 Favicon/        # Ícones do site
-│   │   ├── 📂 Icones/         # Ícones de redes sociais
-│   │   ├── 📂 Jogos/          # Assets dos jogos
-│   │   └── 📂 Logotipo/       # Logos do estúdio
+│   ├── 📂 assets/                # Imagens e vídeos importados
+│   │   ├── 📂 Icones/            # Ícones de redes sociais
+│   │   ├── 📂 Jogos/             # Assets dos jogos (importados via ES6)
+│   │   └── 📂 Logotipo/          # Logos do estúdio
 │   │
-│   ├── 📂 components/         # Componentes React
-│   │   ├── 📂 ui/             # Componentes Shadcn/ui
-│   │   ├── 📄 Header.tsx      # Navegação e seletor de idioma
-│   │   ├── 📄 Hero.tsx        # Seção principal com vídeo
-│   │   ├── 📄 About.tsx       # Sobre o estúdio
-│   │   ├── 📄 Games.tsx       # Catálogo de jogos
-│   │   ├── 📄 GameCard.tsx    # Card individual de jogo
-│   │   ├── 📄 Contact.tsx     # Formulário de contato
-│   │   ├── 📄 Footer.tsx      # Rodapé com redes sociais
-│   │   └── 📄 SEO.tsx         # Componente de meta tags
+│   ├── 📂 components/            # Componentes React
+│   │   ├── 📂 ui/                # Componentes Shadcn/ui
+│   │   ├── 📄 Header.tsx         # Navegação e seletor de idioma
+│   │   ├── 📄 Hero.tsx           # Seção principal com vídeo
+│   │   ├── 📄 About.tsx          # Sobre o estúdio
+│   │   ├── 📄 Games.tsx          # Catálogo de jogos
+│   │   ├── 📄 GameCard.tsx       # Card individual de jogo
+│   │   ├── 📄 Contact.tsx        # Formulário de contato
+│   │   ├── 📄 Footer.tsx         # Rodapé com redes sociais
+│   │   └── 📄 SEO.tsx            # Componente de meta tags
 │   │
-│   ├── 📂 hooks/              # Custom hooks
-│   │   ├── 📄 use-mobile.tsx  # Detecção de dispositivo
-│   │   └── 📄 use-toast.ts    # Sistema de notificações
+│   ├── 📂 hooks/                 # Custom hooks
+│   │   ├── 📄 use-mobile.tsx     # Detecção de dispositivo
+│   │   └── 📄 use-toast.ts       # Sistema de notificações
 │   │
-│   ├── 📂 lib/                # Utilitários
-│   │   ├── 📄 i18n.ts         # Configuração de idiomas
-│   │   └── 📄 utils.ts        # Funções auxiliares
+│   ├── 📂 lib/                   # Utilitários
+│   │   ├── 📄 i18n.ts            # Configuração de idiomas
+│   │   └── 📄 utils.ts           # Funções auxiliares (cn, getAssetPath)
 │   │
-│   ├── 📂 locales/            # Arquivos de tradução
-│   │   ├── 📄 pt.yml          # Português (padrão)
-│   │   └── 📄 en.yml          # Inglês
+│   ├── 📂 locales/               # Arquivos de tradução
+│   │   ├── 📄 pt.yml             # Português (padrão)
+│   │   └── 📄 en.yml             # Inglês
 │   │
-│   ├── 📂 pages/              # Páginas da aplicação
-│   │   ├── 📄 Index.tsx       # Página inicial
-│   │   ├── 📄 Games.tsx       # Página de jogos
-│   │   └── 📄 NotFound.tsx    # Página 404
+│   ├── 📂 pages/                 # Páginas da aplicação
+│   │   ├── 📄 Index.tsx          # Página inicial
+│   │   ├── 📄 Games.tsx          # Página de jogos
+│   │   └── 📄 NotFound.tsx       # Página 404
 │   │
-│   ├── 📄 App.tsx             # Componente principal
-│   ├── 📄 App.css             # Estilos globais
-│   ├── 📄 index.css           # Configuração Tailwind
-│   └── 📄 main.tsx            # Ponto de entrada
+│   ├── 📄 App.tsx                # Componente principal
+│   ├── 📄 App.css                # Estilos globais
+│   ├── 📄 index.css              # Configuração Tailwind
+│   └── 📄 main.tsx               # Ponto de entrada
 │
-├── 📄 index.html              # HTML principal
-├── 📄 tailwind.config.ts      # Configuração Tailwind
-├── 📄 vite.config.ts          # Configuração Vite
-└── 📄 package.json            # Dependências
+├── 📄 index.html                 # HTML principal
+├── 📄 tailwind.config.ts         # Configuração Tailwind
+├── 📄 vite.config.ts             # Configuração Vite
+└── 📄 package.json               # Dependências
 ```
 
 ---
@@ -143,7 +162,7 @@ sensen-games/
 
 ```bash
 # 1. Clone o repositório
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/fernandahaese/sensen-games.git
 
 # 2. Entre na pasta do projeto
 cd sensen-games
@@ -159,19 +178,47 @@ npm run dev
 bun dev
 
 # 5. Acesse no navegador
-# http://localhost:5173
+# http://localhost:8080
 ```
 
 ---
 
 ## 📜 Scripts Disponíveis
 
-| Comando           | Descrição                          |
-| :---------------- | :--------------------------------- |
-| `npm run dev`     | Inicia servidor de desenvolvimento |
-| `npm run build`   | Gera build de produção             |
-| `npm run preview` | Visualiza build de produção        |
-| `npm run lint`    | Executa verificação de código      |
+| Comando           | Descrição                                    |
+| :---------------- | :------------------------------------------- |
+| `npm run dev`     | Inicia servidor de desenvolvimento (porta 8080) |
+| `npm run build`   | Gera build de produção                       |
+| `npm run preview` | Visualiza build de produção                  |
+| `npm run lint`    | Executa verificação de código                |
+
+---
+
+## 🚀 Deploy
+
+O projeto utiliza **GitHub Actions** para deploy automático no GitHub Pages.
+
+### Deploy Automático
+
+Cada push para a branch `main` dispara automaticamente o workflow:
+
+1. ✅ Build do projeto com Vite
+2. ✅ Upload dos arquivos de produção
+3. ✅ Deploy para a branch `gh-pages`
+
+### Configuração do GitHub Pages
+
+1. Vá em **Settings** > **Pages**
+2. Em **Source**, selecione:
+   - Branch: `gh-pages`
+   - Folder: `/ (root)`
+3. Clique em **Save**
+
+### Verificar Status do Deploy
+
+O badge no topo do README mostra o status atual:
+
+[![Deploy](https://github.com/fernandahaese/sensen-games/actions/workflows/deploy.yml/badge.svg)](https://github.com/fernandahaese/sensen-games/actions/workflows/deploy.yml)
 
 ---
 
@@ -188,14 +235,14 @@ Contribuições são bem-vindas! Siga os passos abaixo:
 ```bash
 # Clique no botão "Fork" no GitHub
 # ou use o GitHub CLI
-gh repo fork sensen-games/site
+gh repo fork fernandahaese/sensen-games
 ```
 
 ### 2. Clone seu fork
 
 ```bash
-git clone https://github.com/SEU_USUARIO/site.git
-cd site
+git clone https://github.com/SEU_USUARIO/sensen-games.git
+cd sensen-games
 ```
 
 ### 3. Crie uma branch
