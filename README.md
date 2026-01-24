@@ -212,7 +212,7 @@ Cada push para a branch `main` dispara automaticamente o workflow:
 
 ### Verificar Status do Deploy
 
-O badge no topo do README mostra o status atual:
+Confira este badge aqui README, que mostra o status atual:
 
 [![Deploy](https://github.com/fernandahaese/sensen-games/actions/workflows/deploy.yml/badge.svg)](https://github.com/fernandahaese/sensen-games/actions/workflows/deploy.yml)
 
