@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage": "https://fernandahaese.github.io/sensen-games/"
+    "homepage": "https://fernandahaese.github.io/Sensen-Games/"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

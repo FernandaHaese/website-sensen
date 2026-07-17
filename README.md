@@ -7,9 +7,10 @@
 
 ### 🎮 Criando jogos arcade acessíveis e desafiadores
 
-[![Site](https://img.shields.io/badge/🌐_Site-Visitar-blue?style=for-the-badge)](https://fernandahaese.github.io/sensen-games/)
+[![Site](https://img.shields.io/badge/🌐_Site-Visitar-blue?style=for-the-badge)](https://fernandahaese.github.io/Sensen-Games/)
 [![Steam](https://img.shields.io/badge/🎮_Steam-Loja-black?style=for-the-badge)](https://store.steampowered.com/developer/sensengames)
 [![Press Kit](https://img.shields.io/badge/📦_Press_Kit-Download-green?style=for-the-badge)](https://drive.google.com/drive/u/0/folders/1L_eGgQdwwhAiC6X7qb9LjyxprvuhX3Ma)
+
 </div>
 
 ---
@@ -179,12 +180,12 @@ bun dev
 
 ## 📜 Scripts Disponíveis
 
-| Comando           | Descrição                                    |
-| :---------------- | :------------------------------------------- |
+| Comando           | Descrição                                       |
+| :---------------- | :---------------------------------------------- |
 | `npm run dev`     | Inicia servidor de desenvolvimento (porta 8080) |
-| `npm run build`   | Gera build de produção                       |
-| `npm run preview` | Visualiza build de produção                  |
-| `npm run lint`    | Executa verificação de código                |
+| `npm run build`   | Gera build de produção                          |
+| `npm run preview` | Visualiza build de produção                     |
+| `npm run lint`    | Executa verificação de código                   |
 
 ---
 

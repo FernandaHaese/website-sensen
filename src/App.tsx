@@ -26,7 +26,7 @@ const App = () => (
         <Toaster />
         {/* Sistema de notificações toast alternativo (sonner) */}
         <Sonner />
-        <BrowserRouter basename="/sensen-games/">
+        <BrowserRouter basename="/Sensen-Games/">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/games" element={<GamesPage />} />
